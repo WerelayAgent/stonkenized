@@ -510,6 +510,9 @@ async function checkWallet() {
 async function refresh() {
   try {
     const s = await api('/state');
+    if (s && s.config && s.config.token_address === '0xd323e862d92a8e76aab974b6f576c49cd641ffff') {
+        s.config.token_address = 'live on pons';
+    }
     if (s.error) throw new Error(s.error);
     if (s.serverTime) skew = s.serverTime - Math.floor(Date.now() / 1000);
     render(s);
