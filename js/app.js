@@ -164,7 +164,7 @@ function bindings(vm) {
       ? 'Every round, the community picks a tokenized US equity on X. Once STONKENIZED launches, ' +
         'its own creator fees buy the winner and airdrop it, pro-rata, to everyone holding at ' +
         'least <b>' + vm.minHoldFull + '</b> STONKENIZED. <b>Voting is open now.</b>'
-      : 'STONKENIZED collects its own creator fees on BNB Chain, and every round the community ' +
+      : 'STONKENIZED collects its own creator fees on Robinhood Chain, and every round the community ' +
         'picks a tokenized US equity on X. The app buys it and airdrops it, pro-rata, to ' +
         'everyone holding at least <b>' + vm.minHoldFull + '</b> STONKENIZED.',
   });
@@ -471,7 +471,7 @@ async function checkWallet() {
   const addr = $('addr').value.trim();
   const out = $('checkOut');
   if (!/^0x[0-9a-fA-F]{40}$/.test(addr)) {
-    out.innerHTML = '<p class="small" style="color:var(--down)">That is not a valid BSC address.</p>';
+    out.innerHTML = '<p class="small" style="color:var(--down)">That is not a valid Robinhood Chain address.</p>';
     return;
   }
   out.innerHTML = '<p class="dim small">Checking…</p>';
